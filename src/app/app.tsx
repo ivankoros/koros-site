@@ -14,3 +14,9 @@ export function App() {
 }
 
 export default App;
+
+for (let i = 0; i < 100; i++) {
+  console.log('koros-site');
+}
+
+console.log('u did it :D yay!!!!!!!!!!!!!!!')
