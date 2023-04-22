@@ -8,6 +8,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <StrictMode>
-    <App />
+    <div className='bg-slate-300 w-screen h-screen max-h-screen max-w-screen overflow-hidden'>
+    <App/>
+    </div>
   </StrictMode>
 );
