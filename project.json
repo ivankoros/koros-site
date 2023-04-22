@@ -1,0 +1,78 @@
+{
+  "name": "koros-site",
+  "$schema": "node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "./src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/koros-site"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "koros-site:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "koros-site:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "koros-site:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "preview": {
+      "executor": "@nrwl/vite:preview-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "koros-site:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "koros-site:build:development"
+        },
+        "production": {
+          "buildTarget": "koros-site:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": ["coverage/koros-site"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "coverage/koros-site"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["./src/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "serve-static": {
+      "executor": "@nrwl/web:file-server",
+      "options": {
+        "buildTarget": "koros-site:build"
+      }
+    }
+  },
+  "tags": []
+}
