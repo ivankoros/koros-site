@@ -11,20 +11,36 @@ const characterMap: Record<string, string> = {
   orange: Orangeguy,
 };
 
-function HomeCharacters(props: HomeCharactersProps) {
-  const svgToRender = characterMap[props.guy] || Greenguy;
-
+function HomeCharacters() {
   return (
-    <motion.div
-      whileHover={{
-        scale: 1.0,
-        translateY: -50,
-        transition: { duration: 0.2 },
-      }}
-      className="border border-red-500 w-60 ml-20 pt-20"
-    >
-      <img src={svgToRender} alt="char" />
-    </motion.div>
+    <div className='overflow-hidden w-screen h-screen'>
+      <div id='title_name_text' className='absolute border border-blue-600 text-center text-8xl w-screen justify-center justify-items-center h-1/5'>
+        Ivan Korostenskij
+      </div>
+    <div className='flex justify-evenly bottom-0 h-4/5 w-screen border border-purple-700 mt-[320px]'>
+        <motion.div
+          whileHover={{
+            scale: 1.0,
+            translateY: -50,
+            transition: { duration: 0.2 },
+          }}
+          className="border ml-10 mr-10 border-red-500 h-1/4 w-1/6"
+        >
+          <img src={Greenguy} alt="char" className='min-w-[200px] min-h-[200px] max-w-[300px]'/>
+        </motion.div>
+
+        <motion.div
+          whileHover={{
+            scale: 1.0,
+            translateY: -50,
+            transition: { duration: 0.2 },
+          }}
+          className="border border-red-500 h-1/5 w-1/5 m-36 pt-[200px]"
+        >
+          <img src={Orangeguy} alt="char" className='min-w-[300px] -scale-x-100' />
+        </motion.div>
+        </div>
+      </div>
   );
 }
 
