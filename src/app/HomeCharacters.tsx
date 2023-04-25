@@ -14,8 +14,10 @@ const characterMap: Record<string, string> = {
 function HomeCharacters() {
   return (
     <div className='overflow-hidden w-screen h-screen'>
-      <div id='title_name_text' className='absolute border border-blue-600 text-center text-8xl w-screen justify-center justify-items-center h-1/5'>
+      <div className='w-screen absolute border border-orange-700 h-1/4'>
+      <span id='title_name_text' className='inline-block border border-blue-600 text-8xl w-fit h-1/5'>
         Ivan Korostenskij
+      </span>
       </div>
     <div className='flex justify-evenly bottom-0 h-4/5 w-screen border border-purple-700 mt-[320px]'>
         <motion.div
