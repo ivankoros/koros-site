@@ -8,8 +8,6 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <StrictMode>
-    <div className='bg-[#A8DADC] w-screen h-screen'>
     <App/>
-    </div>
   </StrictMode>
 );

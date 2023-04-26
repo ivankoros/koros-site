@@ -8,7 +8,7 @@ import SocialButtons from './SocialButtons';
 
 export function App() {
   return (
-    <div>
+    <div className='bg-[#A8DADC] w-screen h-screen dark:bg-slate-700'>
       <SocialButtons/>
       <HomePageText/>
       <Dock/>
