@@ -21,6 +21,7 @@ export default defineConfig({
     viteTsConfigPaths({
       root: './',
     }),
+    svgr(),
   ],
 
   // Uncomment this if you are using workers.
