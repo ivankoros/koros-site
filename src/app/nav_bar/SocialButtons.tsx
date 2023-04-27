@@ -4,14 +4,14 @@ import DarkLightModeToggle from "./DarkLightModeToggle";
 
 function SocialButtons() {
   return (
-    <div className="flex flex-row flex-auto space-x-6 justify-start pt-6 mx-12 min-h-fit max-h-[200px]">
+    <div className="flex flex-row flex-auto space-x-6 justify-start pt-6 mx-12 min-h-fit max-h-[200px] border border-red-600">
       {/* Github */}
       <a href="https://github.com/ivankoros" target="_blank" rel="noreferrer">
         <button
           type="button"
           data-te-ripple-init
           data-te-ripple-color="light"
-          className="bg-slate-800 opacity-50 rounded-lg hover:opacity-100 inline-block justify-items-center rounded px-6 py-2.5 text-xs fontq-medium uppercase leading-normal text-white shadow-md transition duration-[15] ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+          className="bg-slate-800 opacity-50 rounded-lg hover:opacity-100 inline-block justify-items-center px-6 py-2.5 text-xs fontq-medium uppercase leading-normal text-white shadow-md transition duration-[15] ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@ function SocialButtons() {
           type="button"
           data-te-ripple-init
           data-te-ripple-color="light"
-          className="bg-slate-800 opacity-50 rounded-lg hover:opacity-100 inline-block justify-items-center rounded px-6 py-2.5 text-xs fontq-medium uppercase leading-normal text-white shadow-md transition duration-[15] ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+          className="bg-slate-800 opacity-50 rounded-lg hover:opacity-100 inline-block justify-items-center px-6 py-2.5 text-xs fontq-medium uppercase leading-normal text-white shadow-md transition duration-[15] ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
