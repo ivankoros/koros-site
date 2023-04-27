@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { MotionConfig, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { ReactComponent as CloudsDuoOne } from '../media/clouds/clouds-duo-1.svg';
 import { ReactComponent as CloudsMogus } from '../media/clouds/clouds-mogus.svg';
@@ -9,7 +9,6 @@ import { ReactComponent as CloudsTrioTwo } from '../media/clouds/clouds-trio-2.s
 
 interface CloudsProps {
   duration: number;
-  cloudFrequency: number;
   cloudType: string;
   opacity: number;
 }
@@ -27,13 +26,23 @@ const cloudTypes: CloudTypes = {
   trio2: <CloudsTrioTwo />,
 };
 
+function getRandomInt(min: number, max: number) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+}
+
 function Clouds(props: CloudsProps) {
+
+  const randomYPosition = getRandomInt(-50, window.innerHeight * 0.25)
+  
   const [cloudStartXPosition, setCloudStartXPosition] = useState(-350);
-  const [cloudStartYPosition, setcloudStartYPosition] = useState(0);
+  const [cloudStartYPosition, setcloudStartYPosition] = useState(randomYPosition);
 
   useEffect(() => {
+
     const animationOver = () => {
-      const randomYPosition = Math.floor(Math.random() * 100);
+      const randomYPosition = getRandomInt(-50, window.innerHeight * 0.25);
       setcloudStartYPosition(randomYPosition);
     };
     const interval = setInterval(animationOver, props.duration * 1000);
@@ -54,10 +63,11 @@ function Clouds(props: CloudsProps) {
   }, []);
 
   return (
-    <div className="absolute w-screen h-32">
+    <div className="absolute w-screen h-32 scale-[3.6]">
+      <MotionConfig>
       <motion.div
         style={{ width: 150, x: cloudStartXPosition, y: cloudStartYPosition, opacity: props.opacity }}
-        animate={{ x: `calc(100vw - ${cloudStartXPosition}px - 150px)` }}
+        animate={{ x: `calc(100vw - ${cloudStartXPosition}px + 150px)` }}
         transition={{
           ease: 'linear',
           duration: props.duration,
@@ -66,6 +76,7 @@ function Clouds(props: CloudsProps) {
       >
         {cloudTypes[props.cloudType]}
       </motion.div>
+      </MotionConfig>
     </div>
   );
 }
@@ -83,24 +94,27 @@ function CloudGenerator(props: CloudGeneratorProps) {
       allCloudTypes[Math.floor(Math.random() * allCloudTypes.length)];
 
     const randomCloudAttributes = {
-      duration: Math.floor(Math.random() * (10 - 5) + 5),
-      cloudFrequency: Math.floor(Math.random() * (10 - 1) + 1),
+      duration: getRandomInt(4, 10),
       cloudType: randomCloudType,
-      opacity: Math.floor(Math.random() * (100 - 50) + 50) / 100,
+      opacity: getRandomInt(5, 10) / 10,
     };
 
     CloudElements.push(
       <Clouds
         key={i}
         duration={randomCloudAttributes.duration}
-        cloudFrequency={randomCloudAttributes.cloudFrequency}
         cloudType={randomCloudAttributes.cloudType}
         opacity={randomCloudAttributes.opacity}
       />
     );
   }
 
-  return CloudElements;
+  return (
+    // eslint-disable-next-line react/jsx-no-useless-fragment
+    <>
+      {CloudElements}
+    </>
+  )
 }
 
 
