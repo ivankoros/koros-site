@@ -1,13 +1,13 @@
 function HomePageText() {
   return (
-    <div className="absolute ml-10">
-      <span className="text-[100px] font-Lato">Hey, my name is </span> <br />
-      <span className="text-[100px] font-Lato font-bold">
+    <div className="absolute ml-10 sm:leading-tight leading-normal">
+      <span className="sm:text-[60px] md:text-[80px] lg:text-[80px] font-Lato">Hey, my name is </span> <br />
+      <span className="sm:text-[60px] md:text-[100px] lg:text-[100px] font-Lato font-bold">
         {' '}
         Ivan Korostenskij
       </span>
       <br />
-      <span className="text-[60px] font-lato">I'm an aspiring developer</span>
+      <span className="sm:text-[60px] md:text-[80px] lg:text-[80px] font-lato">I'm an aspiring developer</span>
     </div>
   );
 }
