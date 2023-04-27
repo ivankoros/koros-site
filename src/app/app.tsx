@@ -4,7 +4,6 @@ import Waves from "./Waves";
 import HomePageText from "./HomePageText";
 import Dock from "./Dock";
 import SocialButtons from './nav_bar/SocialButtons';
-import Clouds from './Clouds';
 import CloudGenerator from './Clouds';
 
 export function App() {
