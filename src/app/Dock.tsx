@@ -1,6 +1,5 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SideDock from '../media/dock.svg'
-import { TIMEOUT } from 'dns';
 
 /**
  * <rect xmlns="http://www.w3.org/2000/svg" class="cls-4" x="253.06" y="20.98" width="8.7" height="12.55" rx="4.35" transform="translate(1.91 -14.23) rotate(3.18)"/>
@@ -24,7 +23,7 @@ const PunPun = (props: DockProps) => {
         const [eyeWidth, setEyeWidth] = useState(DockPropsMap.open);
 
         useEffect(() => {
-            const randomInterval = () => Math.floor(Math.random() * (10000) + 3000);
+            const randomInterval = () => Math.floor(Math.random() * (15000) + 3000);
             async function blink() {
                 setEyeWidth((prevWidth) =>
                 prevWidth === DockPropsMap.open ? DockPropsMap.closed : DockPropsMap.open

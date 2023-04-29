@@ -3,16 +3,18 @@ import styles from './app.module.css';
 import Waves from "./Waves";
 import HomePageText from "./HomePageText";
 import Dock from "./Dock";
-import SocialButtons from './SocialButtons';
-
+import SocialButtons from './nav_bar/SocialButtons';
+import CloudGenerator from './Clouds';
 
 export function App() {
   return (
-    <div>
+    <div className='bg-[#A8DADC] w-screen h-screen dark:bg-slate-700'>
+      <CloudGenerator cloud_amount={12}/>
       <SocialButtons/>
       <HomePageText/>
       <Dock/>
       <Waves/>
+
     </div>
   );
 }
