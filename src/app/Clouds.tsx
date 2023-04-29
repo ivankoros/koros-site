@@ -11,6 +11,7 @@ interface CloudsProps {
   duration: number;
   cloudType: string;
   opacity: number;
+  scale: number;
 }
 
 interface CloudTypes {
@@ -34,26 +35,20 @@ function getRandomInt(min: number, max: number) {
 
 function Clouds(props: CloudsProps) {
 
-  const randomYPosition = getRandomInt(-50, window.innerHeight * 0.25)
+  const randomYPosition = getRandomInt(-50, window.innerHeight * 0.2)
   
-  const [cloudStartXPosition, setCloudStartXPosition] = useState(-350);
+  const [cloudStartXPosition, setCloudStartXPosition] = useState(() =>
+    getRandomInt(-50, 0));
   const [cloudStartYPosition, setcloudStartYPosition] = useState(randomYPosition);
 
-  useEffect(() => {
-
-    const animationOver = () => {
-      const randomYPosition = getRandomInt(-50, window.innerHeight * 0.25);
-      setcloudStartYPosition(randomYPosition);
-    };
-    const interval = setInterval(animationOver, props.duration * 1000);
-    return () => {
-      clearInterval(interval);
-    };
-  }, [props.duration]);
+  function setCloudStartYPosition () {
+    const randomYPosition = getRandomInt(-50, window.innerHeight * 0.2);
+    setcloudStartYPosition(randomYPosition);
+  }
 
   useEffect(() => {
     const handleResize = () => {
-      setCloudStartXPosition(-350);
+      getRandomInt(-30, 0);
     };
     window.addEventListener('resize', handleResize);
 
@@ -67,12 +62,22 @@ function Clouds(props: CloudsProps) {
       <MotionConfig>
       <motion.div
         style={{ width: 150, x: cloudStartXPosition, y: cloudStartYPosition, opacity: props.opacity }}
-        animate={{ x: `calc(100vw - ${cloudStartXPosition}px + 150px)` }}
+        animate={{ x: `100vw`}}
         transition={{
           ease: 'linear',
           duration: props.duration,
           repeat: Infinity,
         }}
+        onTouchEnd={() => {
+          console.log('animation complete');
+        }
+        }
+        onAnimationIterationCapture={() => {
+          console.log('animation complete');
+          setCloudStartYPosition();
+          setCloudStartXPosition(-350);
+        }}
+    
       >
         {cloudTypes[props.cloudType]}
       </motion.div>
@@ -94,17 +99,18 @@ function CloudGenerator(props: CloudGeneratorProps) {
       allCloudTypes[Math.floor(Math.random() * allCloudTypes.length)];
 
     const randomCloudAttributes = {
-      duration: getRandomInt(4, 10),
+      duration: getRandomInt(15, 40),
       cloudType: randomCloudType,
       opacity: getRandomInt(5, 10) / 10,
+      scale: Math.random() * (3.8 - 2.5) + 2.5,
     };
 
     CloudElements.push(
       <Clouds
-        key={i}
         duration={randomCloudAttributes.duration}
         cloudType={randomCloudAttributes.cloudType}
         opacity={randomCloudAttributes.opacity}
+        scale={randomCloudAttributes.scale}
       />
     );
   }
