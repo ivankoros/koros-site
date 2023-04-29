@@ -9,7 +9,7 @@ import CloudGenerator from './Clouds';
 export function App() {
   return (
     <div className='bg-[#A8DADC] w-screen h-screen dark:bg-slate-700'>
-      <CloudGenerator cloud_amount={3}/>
+      <CloudGenerator cloud_amount={12}/>
       <SocialButtons/>
       <HomePageText/>
       <Dock/>
