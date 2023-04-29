@@ -23,7 +23,7 @@ const PunPun = (props: DockProps) => {
         const [eyeWidth, setEyeWidth] = useState(DockPropsMap.open);
 
         useEffect(() => {
-            const randomInterval = () => Math.floor(Math.random() * (10000) + 3000);
+            const randomInterval = () => Math.floor(Math.random() * (15000) + 3000);
             async function blink() {
                 setEyeWidth((prevWidth) =>
                 prevWidth === DockPropsMap.open ? DockPropsMap.closed : DockPropsMap.open
