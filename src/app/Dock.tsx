@@ -15,7 +15,7 @@ const DockPropsMap: Record<string, string> = {
 }
 
 const PunPun = (props: DockProps) => {
-    
+
         const delay = (ms: number) => new Promise(
             resolve => setTimeout(resolve, ms)
         )
