@@ -4,7 +4,7 @@ import DarkLightModeToggle from "./DarkLightModeToggle";
 
 function SocialButtons() {
   return (
-    <div className="flex flex-row flex-auto space-x-6 justify-start pt-6 mx-12 min-h-fit max-h-[200px] border border-red-600">
+    <div className="flex flex-row flex-auto space-x-6 justify-start pt-6 mx-12 min-h-fit max-h-[200px]">
       {/* Github */}
       <a href="https://github.com/ivankoros" target="_blank" rel="noreferrer">
         <button
