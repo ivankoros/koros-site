@@ -99,7 +99,7 @@ function CloudGenerator(props: CloudGeneratorProps) {
       allCloudTypes[Math.floor(Math.random() * allCloudTypes.length)];
 
     const randomCloudAttributes = {
-      duration: getRandomInt(15, 40),
+      duration: getRandomInt(15, 60),
       cloudType: randomCloudType,
       opacity: getRandomInt(5, 10) / 10,
       scale: Math.random() * (3.8 - 2.5) + 2.5,
