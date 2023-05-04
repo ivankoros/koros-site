@@ -8,6 +8,7 @@ This is my open-source, personal website :)
 - HTML/CSS: Tailwind
 - Adobe Illustrator for all custom illustrations
 - Nx for bundling and deployment
+- NxCloud for deployment
 
 Current state:
 ![](src/media/koros-site-29.gif)
