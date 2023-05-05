@@ -1,4 +1,4 @@
-# Koros Sitell
+# Koros Site
 
 This is my open-source, personal website :)
 
