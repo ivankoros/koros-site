@@ -4,7 +4,7 @@ This is my open-source, personal website :)
 
 ## Tech stack:
 - Typescript: React
-  - Framer motion and React Spring for animation
+  - Framer motion and React Spring for animations
 - HTML/CSS: Tailwind
 - Adobe Illustrator for all custom illustrations
 - Nx for bundling and deployment
