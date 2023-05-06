@@ -11,6 +11,7 @@ const characterMap: Record<string, string> = {
   orange: Orangeguy,
 };
 
+  // Render SVGs with map and custom interface depending on prop 
 function HomeCharacters() {
   return (
     <div className='overflow-hidden w-screen h-screen'>
