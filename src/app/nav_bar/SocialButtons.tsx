@@ -64,8 +64,10 @@ function SocialButtons() {
   </svg>
         </button>
       </a>
-
+    <div className="flex flex-row items-end">
       <DarkLightModeToggle></DarkLightModeToggle>
+      </div>
+    </div>
     </div>
   );
 }
