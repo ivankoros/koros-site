@@ -4,15 +4,14 @@ import DarkLightModeToggle from "./DarkLightModeToggle";
 
 function SocialButtons() {
   return (
-    <div>
-    <div className="flex flex-row flex-auto space-x-6 justify-start pt-6 mx-12 min-h-fit max-h-[200px]">
+    <div className="flex flex-row flex-auto space-x-6 justify-start pt-6 mx-12 min-h-fit max-h-[200px] z-100">
       {/* Github */}
       <a href="https://github.com/ivankoros" target="_blank" rel="noreferrer">
         <button
           type="button"
           data-te-ripple-init
           data-te-ripple-color="light"
-          className="bg-slate-800 opacity-50 rounded-lg hover:opacity-100 inline-block justify-items-center px-6 py-2.5 text-xs fontq-medium uppercase leading-normal text-white shadow-md transition duration-[15] ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+          className="bg-slate-800 cursor-pointer opacity-50 hover:opacity-100 rounded-lg inline-block justify-items-center px-6 py-2.5 text-xs fontq-medium uppercase leading-normal text-white shadow-md transition-opacity hue-rotate-0 duration-[50]"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -29,9 +28,7 @@ function SocialButtons() {
       <a onClick={() => window.location.href = 'mailto:ivankoros2@gmail.com'} href='mailto:disha@uplers.com' rel="noreferrer">
         <button
           type="button"
-          data-te-ripple-init
-          data-te-ripple-color="light"
-          className="bg-slate-800 opacity-50 rounded-lg hover:opacity-100 inline-block justify-items-center px-6 py-2.5 text-xs fontq-medium uppercase leading-normal text-white shadow-md transition duration-[15] ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+          className="bg-slate-800 opacity-50 rounded-lg hover:opacity-100 inline-block justify-items-center px-6 py-2.5 text-xs fontq-medium uppercase leading-normal text-white shadow-md transition duration-[50] hue-rotate-0 ease-in-out"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +51,7 @@ function SocialButtons() {
           type="button"
           data-te-ripple-init
           data-te-ripple-color="light"
-          className="bg-slate-800 opacity-50 rounded-lg hover:opacity-100 inline-block justify-items-center px-6 py-2.5 text-xs fontq-medium uppercase leading-normal text-white shadow-md transition duration-[15] ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+          className="bg-slate-800 opacity-50 rounded-lg hover:opacity-100 inline-block justify-items-center px-6 py-2.5 text-xs fontq-medium uppercase leading-normal text-white shadow-md transition duration-[50] ease-in-out hue-rotate-0 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

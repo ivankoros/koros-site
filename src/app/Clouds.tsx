@@ -62,9 +62,10 @@ function Clouds(props: CloudsProps) {
       <MotionConfig>
       <motion.div
         style={{ width: 150, x: cloudStartXPosition, y: cloudStartYPosition, opacity: props.opacity }}
-        animate={{ x: `100vw`}}
+        animate={{ x: `80vw`}}
         transition={{
           ease: 'linear',
+          delay: getRandomInt(0, 10),
           duration: props.duration,
           repeat: Infinity,
         }}
@@ -99,7 +100,7 @@ function CloudGenerator(props: CloudGeneratorProps) {
       allCloudTypes[Math.floor(Math.random() * allCloudTypes.length)];
 
     const randomCloudAttributes = {
-      duration: getRandomInt(15, 60),
+      duration: getRandomInt(15, 70),
       cloudType: randomCloudType,
       opacity: getRandomInt(5, 10) / 10,
       scale: Math.random() * (3.8 - 2.5) + 2.5,
