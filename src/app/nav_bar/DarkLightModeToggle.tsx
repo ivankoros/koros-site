@@ -5,7 +5,7 @@ function DarkLightModeToggle() {
   const [colorMode, setColorMode] = useColorMode();
 
   return (
-    <div className="border border-blue-500">
+    <div className="">
       <label className="relative inline-flex items-center cursor-pointer">
         <input
           type="checkbox"
