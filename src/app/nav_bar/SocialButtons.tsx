@@ -68,7 +68,7 @@ function SocialButtons() {
       <DarkLightModeToggle></DarkLightModeToggle>
       </div>
     </div>
-    </div>
+    
   );
 }
 
