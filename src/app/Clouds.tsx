@@ -20,7 +20,6 @@ interface CloudTypes {
 
 const cloudTypes: CloudTypes = {
   duo: <CloudsDuoOne />,
-  mogus
   multi: <CloudsMultiOne />,
   plane: <CloudsPlaneOne />,
   trio: <CloudsTrioOne />,
