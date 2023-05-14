@@ -4,7 +4,7 @@ function HomePageText() {
       <span className="sm:text-[60px] md:text-[80px] lg:text-[80px] font-Lato">Hey, my name is </span> <br />
       <span className="sm:text-[60px] md:text-[100px] lg:text-[100px] font-Lato font-bold">
         {' '}
-        
+
         Ivan Korostenskij
       </span>
       <br />
