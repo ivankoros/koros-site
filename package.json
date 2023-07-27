@@ -29,7 +29,7 @@
     "@nrwl/linter": "16.1.1",
     "@nrwl/nx-cloud": "latest",
     "@nrwl/react": "16.1.1",
-    "@nrwl/vite": "15.9.2",
+    "@nrwl/vite": "16.5.5",
     "@nrwl/workspace": "16.2.1",
     "@testing-library/react": "14.0.0",
     "@types/node": "18.14.2",
