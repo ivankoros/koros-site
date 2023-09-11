@@ -26,7 +26,7 @@
     "@nrwl/cypress": "16.6.0",
     "@nrwl/eslint-plugin-nx": "15.9.2",
     "@nrwl/js": "16.2.2",
-    "@nrwl/linter": "16.6.0",
+    "@nrwl/linter": "16.8.1",
     "@nrwl/nx-cloud": "latest",
     "@nrwl/react": "16.1.1",
     "@nrwl/vite": "16.7.0",
